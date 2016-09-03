@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MDF3Daydream</string>
+    <string name="activity_name">Dreamservice Example</string>
+    <string name="activity_instructions">Instructions</string>
+    <string name="pref_category_animations">Animations</string>
+    <string name="pref_list_title1">Rotate Cogwheels</string>
+    <string name="pref_list_summary1">Choose direction to rotate cogwheels</string>
+    <string name="daydream_string">For Daydream Service, go to Settings >> Display >> Daydream.</string>
+</resources>

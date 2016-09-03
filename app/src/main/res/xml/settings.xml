@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_category_animations">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/list_pref_entries"
+            android:entryValues="@array/list_pref_values"
+            android:key="PREF_LIST"
+            android:summary="@string/pref_list_summary1"
+            android:title="@string/pref_list_title1" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

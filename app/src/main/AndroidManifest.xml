@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mdf3.ervinaven.mdf3daydream">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/gears_launcher"
+        android:label="@string/activity_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/activity_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait"
+            android:icon="@mipmap/gears_launcher"></activity>
+
+        <!-- Android Permission BIND_DREAM_SERVICE is for API 21 and above -->
+        <service
+            android:name=".MyDreamService"
+            android:exported="true"
+            android:icon="@mipmap/gears_launcher"
+            android:label="@string/activity_name"
+            android:permission="android.permission.BIND_DREAM_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- This adds a configuration screen to the daydream in Settings -->
+            <meta-data
+                android:name="android.service.dream"
+                android:resource="@xml/thedream" />
+        </service>
+    </application>
+
+</manifest>
